@@ -1,0 +1,17 @@
+# Tested on Windows 11, Python 3.12, one RTX 4060 Laptop GPU (8 GB).
+# Versions actually used during development:
+#   torch 2.6.0+cu124, torchvision 0.21.0+cu124, transformers 5.x,
+#   qwen-vl-utils 0.0.14, accelerate 1.15.0, bitsandbytes 0.50.2,
+#   numpy 2.5.4, pillow 13.0.0, ultralytics (YOLO-World + MobileSAM wrappers)
+torch>=2.6
+torchvision>=0.21
+transformers>=4.49        # Qwen2_5_VLForConditionalGeneration needs >= 4.49
+accelerate>=1.0
+qwen-vl-utils>=0.0.8
+ultralytics>=8.3          # YOLO-World detector and the MobileSAM wrapper
+opencv-python>=4.10
+pillow>=11.0
+numpy>=2.0
+
+# Optional: only needed for --quant 4bit (CUDA)
+bitsandbytes>=0.45
